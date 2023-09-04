@@ -9,9 +9,6 @@ import Header from './components/Home/Header';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 
-const numRows = 5;
-const numSeatsPerRow = 10;
-const seatPrice = 100; // Price per seat
 
 function App() {
   return (

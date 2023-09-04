@@ -14,8 +14,7 @@ function Confirmation(props) {
     e.preventDefault();
 
     // Generate the QR code as a Data URI
-    const dataURL = document.querySelector('canvas').toDataURL('image/png');
-    const imageData = dataURL.split(',')[1]; // Extract the base64-encoded image data
+    
 
     // Use the base64-encoded image data for photo.png
     const base64data = photo.split(',')[1];

@@ -6,7 +6,7 @@ function Header() {
   return (
     <div>
     <header>
-    <a href="#" class="logo"><i class="fas fa-utensils"></i>BOOK-YOUR-SHOW</a>
+    <a href="/" class="logo"><i class="fas fa-utensils"></i>BOOK-YOUR-SHOW</a>
 
     <nav class="navbar">
         <a href='/'>Home</a>
