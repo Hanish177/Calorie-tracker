@@ -1,6 +1,6 @@
 import Body from './Body'
 
-
+import Header from './Header';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -11,7 +11,7 @@ function Home() {
 
 
   useEffect(() => {
-    axios.get('http://localhost:5000/data') // Replace with your server's URL
+    axios.get('https://easytickets.onrender.com/data') // Replace with your server's URL
       .then((response) => {
         setData(response.data);
       })
@@ -33,6 +33,7 @@ function Home() {
 
   return (
     <div className="App">
+    <Header/>
       <h1>Movie Names</h1>
       <div className="search-bar">
         <input

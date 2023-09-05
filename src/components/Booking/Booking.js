@@ -68,7 +68,7 @@ function Booking() {
         theater: theaterName,
       }));
 
-      await axios.post(`http://localhost:5000/selected-seats?theatre=${theaterName}`, selectedSeatsData);
+      await axios.post(`https://easytickets.onrender.com/selected-seats?theatre=${theaterName}`, selectedSeatsData);
 
       alert(`Proceed to payment. Total Cost: ${totalCost} USD`);
       if(sessionStorage.getItem('username')!=null){
@@ -86,7 +86,7 @@ function Booking() {
   // Function to fetch and log already booked seats from the database
   const fetchBookedSeats = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/booked-seats?theatre=${theaterName}`);
+      const response = await axios.get(`https://easytickets.onrender.com/booked-seats?theatre=${theaterName}`);
       const bookedSeatsData = response.data;
       console.log('Booked Seats:', bookedSeatsData);
 

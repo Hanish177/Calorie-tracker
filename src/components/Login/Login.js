@@ -21,7 +21,7 @@ const Login = () => {
 
     // Make a POST request to the backend endpoint
     axios
-      .post('http://localhost:5000/login', { username, password })
+      .post('https://easytickets.onrender.com/login', { username, password })
       .then((response) => {
         console.log(response.data);
         if (response.status === 200 && response.data === 'Login successful') {

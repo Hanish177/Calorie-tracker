@@ -29,7 +29,7 @@ class Signup extends React.Component {
     const { username, password, email } = this.state;
     // Make a POST request to the backend endpoint
     axios
-      .post('http://localhost:5000/signup', { username, password, email })
+      .post('https://easytickets.onrender.com/signup', { username, password, email })
       .then((response) => {
         console.log(response.data);
         // Redirect to login page after successful registration
