@@ -1,8 +1,14 @@
 import React from 'react'
 import '../../style.css'
+import { useNavigate } from 'react-router-dom'
 
 
 function Header() {
+  const navigate=useNavigate()
+  const handlebutton = async (e) => {
+    navigate('/history')
+  }
+
   return (
     <div>
     <header>
@@ -10,7 +16,7 @@ function Header() {
 
     <nav class="navbar">
         <a href='/'>Home</a>
-        <a href='/history'>History</a>
+        <button onClick={handlebutton}>History</button>
         
     </nav>
     </header>
