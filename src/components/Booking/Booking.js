@@ -70,7 +70,7 @@ function Booking() {
 
       await axios.post(`https://easytickets.onrender.com/selected-seats?theatre=${theaterName}`, selectedSeatsData);
 
-      alert(`Proceed to payment. Total Cost: ${totalCost} USD`);
+      alert(`Proceed to payment. Total Cost: ${totalCost} INR`);
       if(sessionStorage.getItem('username')!=null){
         navigate('/confirmation');
       }

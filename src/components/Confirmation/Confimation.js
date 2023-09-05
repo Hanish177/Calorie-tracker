@@ -32,8 +32,8 @@ function Confirmation(props) {
 
     try {
       const serviceID = 'service_hublt2j'; // Replace with your service ID
-      const templateID = 'template_mbf3lym'; // Replace with your template ID
-      const userID = '40Fa-WqgzosJ-S6mw'; 
+      const templateID = 'template_a366f37'; // Replace with your template ID
+      const userID = 'E3x8Mz-TlK5_UcuFd'; 
       const response = await emailjs.send(
         serviceID,
         templateID,
