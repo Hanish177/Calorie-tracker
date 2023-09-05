@@ -1,20 +1,86 @@
-/* Add this to your CSS */
-.booked {
-  background-color: red; /* Set the background color to red for booked seats */
-  color: white; /* Set the text color to white for better visibility */
-  pointer-events: none; /* Disable pointer events for booked seats */
-}
-
-.selected {
-  background-color: green; /* Set the background color to green for selected seats */
-  color: white; /* Set the text color to white for better visibility */
-}
-
+/* Booking.css */
 .theater {
-  margin-top: 50px; /* Adjust the value as needed */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: rgb(148, 199, 199);
 }
 
-.next-button{
+h1 {
+  font-size: 24px;
+  color: #e94d4d;
+  margin-bottom: 20px;
+}
+
+.seat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-letter {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.seat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.seat.booked {
+  background-color: #e12020; /* Gray for booked seats */
+  cursor: not-allowed; /* Prevent clicking on booked seats */
+}
+
+.seat.selected {
+  background-color: #007bff; /* Blue for selected seats */
+  color: #fff;
+}
+
+.screen-view {
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  font:100;
+  padding: 10px;
+  margin: 20px auto;
+  width: 15%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.screen-content {
+  padding: 10px;
+}
+
+.next-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  width: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
   margin-top: 20px;
-  width: 200px;
+}
+
+.next-button:hover {
+  background-color: #d5881c;
 }

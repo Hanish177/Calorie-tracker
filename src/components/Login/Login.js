@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Login.css'; // Import the CSS file
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ const Login = () => {
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
-    sessionStorage.setItem('username',event.target.value)
+    sessionStorage.setItem('username', event.target.value);
   };
 
   const handlePasswordChange = (event) => {
@@ -28,7 +29,7 @@ const Login = () => {
           navigate('/home'); // Redirect to the desired page
         } else {
           // Handle unsuccessful login
-          console.log('Invalid')
+          console.log('Invalid');
           alert('Invalid Credentials');
         }
       })
@@ -39,11 +40,10 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Login</h1>
       <form onSubmit={handleSubmit} method='post'>
-        <label>
-          Username:
+        <label><h2>Username:</h2>
           <input
             type="text"
             value={username}
@@ -51,18 +51,18 @@ const Login = () => {
           />
         </label>
         <br />
-        <label>
-          Password:
+        <label><h2>Password:</h2>
+          
           <input
             type="password"
             value={password}
             onChange={handlePasswordChange}
           />
         </label>
-        <br />
-        <button type="submit">Submit</button>
+        <br /><h2>
+        <button type="submit">Submit</button></h2>
       </form>
-      <a href="signup">New User?</a>
+      <h2><a href="signup">New User?</a></h2>
     </div>
   );
 };

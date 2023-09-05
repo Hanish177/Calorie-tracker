@@ -136,18 +136,9 @@ function Booking() {
         className="next-button"
         onClick={handleNextClick}
       >
-        Next ({totalCost} USD)
+        Next ({totalCost} INR)
       </button>
-
-      <div className="booked-seats">
-        <h2>Already Booked Seats:</h2>
-        <ul>
-          {bookedSeats.map((seat, index) => (
-            <li key={index}>{`Row ${seat.rowIndex + 1}, Seat ${seat.seatNumber}`}</li>
-          ))}
-        </ul>
       </div>
-    </div>
   );
 }
 

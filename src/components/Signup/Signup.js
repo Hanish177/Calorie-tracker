@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
+import './Signup.css'; // Import the CSS file
 
 class Signup extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Signup extends React.Component {
     this.state = {
       username: '',
       password: '',
-      email: ''
+      email: '',
+      shouldRedirect: false, // Added for redirection
     };
   }
 
@@ -43,44 +45,47 @@ class Signup extends React.Component {
   render() {
     const { username, password, email, shouldRedirect } = this.state;
     if (shouldRedirect) {
-        alert("User created Successfully")
+      alert("User created Successfully");
       return <Navigate to="/" />;
     }
 
     return (
-      <div>
-        <h1>Register</h1>
+      <div className="container">
+        <h1 className="heading">Register</h1>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Username:
+          <label className="label">
+           <h2>Username:</h2> 
             <input
               type="text"
               value={username}
               onChange={this.handleUsernameChange}
+              className="input-field"
             />
           </label>
           <br />
-          <label>
-            Password:
+          <label className="label"><h2>Password:</h2>
+            
             <input
               type="password"
               value={password}
               onChange={this.handlePasswordChange}
+              className="input-field"
             />
           </label>
           <br />
-          <label>
-            Mail:
+          <label className="label">
+          <h2>Email:</h2>  
             <input
               type="text"
               value={email}
               onChange={this.handleEmailChange}
+              className="input-field"
             />
           </label>
           <br />
-          <button type="submit">Submit</button>
-        </form>
-        <a href="/">Existing User?</a>
+          <button type="submit" className="submit-button">Submit</button>
+        </form><h2>
+        <a href="/" className="link">Existing User?</a></h2>
       </div>
     );
   }

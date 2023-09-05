@@ -20,7 +20,7 @@ function Confirmation(props) {
     const base64data = photo.split(',')[1];
 
     const emailData = {
-      to_email: 'gowsikkan.s2001@gmail.com',
+      to_email: '{email}',
       subject: 'Booking Confirmation',
       movieName,
       showtime,
@@ -31,7 +31,7 @@ function Confirmation(props) {
     };
 
     try {
-      const serviceID = 'service_qi5tfdo'; // Replace with your service ID
+      const serviceID = 'service_hublt2j'; // Replace with your service ID
       const templateID = 'template_mbf3lym'; // Replace with your template ID
       const userID = '40Fa-WqgzosJ-S6mw'; 
       const response = await emailjs.send(

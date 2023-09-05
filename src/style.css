@@ -52,7 +52,7 @@ section:nth-child(even){
     display: inline-block;
     font-size: 1.7rem;
     color :black;
-    background: var(--black);
+    background: orange;
     border-radius: .5rem;
     cursor: pointer;
     padding:.8rem 3rem;
@@ -82,11 +82,11 @@ header .logo{
 }
 
 header .logo i{
-    color:var(--green);
+    color:var(--light-color);
 }
 
 header .navbar a{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     border-radius: .5rem;
     padding:.5rem 1.5rem;
     color:var(--light-color);
@@ -595,7 +595,7 @@ header .icons #menu-bars{
 
 /* App.css */
 .movie-card {
-    border: 1px solid #ccc;
+    border: 1px solid #fdfcfc;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -610,16 +610,16 @@ header .icons #menu-bars{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Distribute space between cards */
-    margin: 0 -10px; /* Negative margin to offset the margin of the cards */
+    margin: 10 -10px; /* Negative margin to offset the margin of the cards */
   }
   
   .box {
-    width: calc(20% - 20px); /* Adjust the width and spacing as needed */
+    width: calc(15% - 20px); /* Adjust the width and spacing as needed */
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #fb9393;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    background-color: #acafb0;
     text-align: center;
   }
   
